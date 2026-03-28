@@ -52,9 +52,11 @@
 <!-- https://github.com/anuraghazra/github-readme-stats -->
 <br>
 <div align="center">
-  <img width="90%" src="https://github-readme-stats-sigma-five.vercel.app/api?username=hoangduc180804-creator&show_icons=true&theme=react&hide_border=true" />
+  <img height="170" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=hoangduc180804-creator&layout=compact&theme=react&hide_border=true" />
   
-  <img width="90%" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=hoangduc180804-creator&layout=compact&theme=react&hide_border=true" />
+  <img width="15"/>
+  
+  <img height="170" src="https://github-readme-stats-sigma-five.vercel.app/api?username=hoangduc180804-creator&show_icons=true&theme=react&hide_border=true&include_all_commits=true" />
 </div>
 
 <br>
