@@ -1,66 +1,121 @@
-<svg width="100%" height="160" viewBox="0 0 846 160" xmlns="http://www.w3.org/2000/svg">
+<svg width="100%" height="190" viewBox="0 0 900 190" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f5ff"/>
+      <stop offset="50%" stop-color="#7a5cff"/>
+      <stop offset="100%" stop-color="#00ff9f"/>
+    </linearGradient>
+  </defs>
+
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
         .container {
-          font-family: 'Segoe UI', Roboto, sans-serif;
+          width: 100%;
+          height: 190px;
           display: flex;
           flex-direction: column;
-          align-items: center;
           justify-content: center;
-          width: 100%;
-          height: 160px;
-          border-radius: 12px;
-          background: linear-gradient(135deg, #1f1c2c, #928dab);
-          color: white;
+          align-items: center;
+          background: radial-gradient(circle at center, #0f172a 0%, #000000 80%);
+          border-radius: 16px;
+          font-family: 'Segoe UI', Roboto, sans-serif;
           text-align: center;
-          padding: 10px;
-          box-shadow: 0 0 20px rgba(0,0,0,0.4);
+          position: relative;
+          overflow: hidden;
+          border: 1px solid rgba(255,255,255,0.1);
+          box-shadow: 0 0 30px rgba(0,255,255,0.15);
         }
 
-        .quotes-eng {
-          font-size: 20px;
-          font-weight: bold;
-          background: linear-gradient(90deg, #61dafb, #00ffcc);
+        /* Scan line effect */
+        .container::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 200%;
+          background: repeating-linear-gradient(
+            to bottom,
+            rgba(255,255,255,0.03) 0px,
+            rgba(255,255,255,0.03) 1px,
+            transparent 1px,
+            transparent 3px
+          );
+          animation: scan 6s linear infinite;
+        }
+
+        @keyframes scan {
+          from { transform: translateY(-50%); }
+          to { transform: translateY(0); }
+        }
+
+        .title {
+          font-size: 26px;
+          font-weight: 700;
+          background: linear-gradient(90deg, #00f5ff, #7a5cff, #00ff9f);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
-          animation: glow 2s infinite alternate;
+          animation: glow 2s ease-in-out infinite alternate;
         }
 
-        .quotes-vi {
+        .subtitle {
+          margin-top: 8px;
           font-size: 16px;
+          color: #cbd5e1;
           opacity: 0.9;
-          margin-top: 5px;
+        }
+
+        .typing {
+          margin-top: 10px;
+          font-size: 15px;
+          color: #00ffcc;
+          border-right: 2px solid #00ffcc;
+          white-space: nowrap;
+          overflow: hidden;
+          width: 0;
+          animation: typing 4s steps(40, end) forwards, blink 0.8s infinite;
+        }
+
+        @keyframes typing {
+          from { width: 0 }
+          to { width: 500px }
+        }
+
+        @keyframes blink {
+          50% { border-color: transparent }
         }
 
         .signature {
-          font-size: 14px;
-          margin-top: 10px;
-          opacity: 0.7;
-          font-style: italic;
+          margin-top: 14px;
+          font-size: 12px;
+          letter-spacing: 2px;
+          color: rgba(255,255,255,0.5);
         }
 
         @keyframes glow {
           from {
-            text-shadow: 0 0 5px #61dafb;
+            text-shadow: 0 0 5px #00f5ff, 0 0 10px #7a5cff;
           }
           to {
-            text-shadow: 0 0 15px #00ffcc;
+            text-shadow: 0 0 20px #00ff9f, 0 0 30px #00f5ff;
           }
         }
       </style>
 
       <div class="container">
-        <div class="quotes-eng">
-          🚀 "Learn something new every day — don't become yesterday's copy!"
+        <div class="title">
+          🚀 Hoang Cong Duc | Developer
         </div>
 
-        <div class="quotes-vi">
-          "Mỗi ngày học một điều mới — đừng trở thành bản sao của ngày hôm qua."
+        <div class="subtitle">
+          Build modern apps • Clean code • Continuous learning
+        </div>
+
+        <div class="typing">
+          Learn something new every day — don't become yesterday's copy.
         </div>
 
         <div class="signature">
-          — Hoang Cong Duc | Developer —
+          ⚡ CODE • CREATE • INNOVATE ⚡
         </div>
       </div>
     </div>
